@@ -1,6 +1,12 @@
 ## A Cut Above The Rest
 ### Analyzing the Impact of Shot Detection Algorithms on the Quality of Chunk Encoded Videos
 
+### Motivation
+
+I read [this post about the Dynamic Optimizer[(https://netflixtechblog.com/dynamic-optimizer-a-perceptual-video-encoding-optimization-framework-e19f1e3a277f) from Netflix's engineering blog. Dynamic optimizer is a framework for optimizing video encoding.
+
+how important is it to detect accurate shot transitions when splitting videos into chunks for encoding?
+
 When we upload a video to YouTube or Twitch, the raw bytes of our file are encoded into optimized formats that are more conducive to storage and transfer. When we play it later, a partial reversal occurs as our devices decode the file.  
 
 Advances in video encoding seek to minimize video file sizes while retaining quality. However, for the algorithms that work the best, we accept considerably increased complexities and computational overhead. One way to mitigate these costs is chunk-based encoding. Breaking videos up and encoding them in parallel is nearly infinitely scalable. 
